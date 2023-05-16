@@ -2,17 +2,22 @@ import { useEffect, useState } from "react";
 import styles from './JokeBlock.module.css';
 
 export default function JokeBlock() {
-    const [joke, setJoke] = useState("")
+    const [koan, setKoan] = useState("");
 
     useEffect(() => {
-        fetch('/api/joke')
-        .then(res => res.json())
-        .then(jokeJSON=> {
-            setJoke(jokeJSON)
+        fetch('https://zenquotes.io/api/random', {
+            headers: {
+                'Content-Type': 'application/json'
+            }
         })
+        .then(res => res.json())
+        .then(data => {
+            setKoan(`${data[0].q} - ${data[0].a}`);
+        })
+        .catch(err => console.error(err));
     }, []);
 
     return (
-        <blockquote className={styles.quote}>{joke}</blockquote>
+        <blockquote className={styles.quote}>{koan}</blockquote>
     )
 }

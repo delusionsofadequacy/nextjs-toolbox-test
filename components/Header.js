@@ -2,7 +2,7 @@ export default function Header({ title }) {
   return (
     <>
       <h1 className="title">{title}</h1>
-      <p>I am 32 years old, what the hell am I doing with my life?</p>
+      <p>This is a test website for messing around.</p>
       <p>
         Hi 👋! This template gives you a{" "}
         <a href="https://nextjs.org/">Next.js</a> app with the scaffolding for{" "}
