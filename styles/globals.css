@@ -23,6 +23,7 @@ main {
 
 hr {
   width: 100%;
+  animation: wiggle 3s infinite;
 }
 
 @keyframes wiggle {
