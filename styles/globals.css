@@ -119,3 +119,8 @@ ul li::before {
   font-weight: bold;
   color: #333;
 }
+
+/* trolling */
+p>span {
+  transition: transform 10s linear, font-size 10s linear;
+}

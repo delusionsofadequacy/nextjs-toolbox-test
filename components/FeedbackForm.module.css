@@ -20,11 +20,11 @@
   margin: 15px 0;
   padding: 12px 20px;
   width: 100%;
-  transition: opacity 1s !important;
+  transition: opacity 0.5s 0.5s;
 }
 
 .button:hover {
-  transition: opacity 1s !important;
+  transition: opacity 0.5s 0.5s;
   opacity: 0.01;
   cursor: progress !important;
 }
