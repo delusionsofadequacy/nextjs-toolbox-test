@@ -5,7 +5,7 @@ export default function JokeBlock() {
     const [koan, setKoan] = useState("");
 
     useEffect(() => {
-        fetch('https://zenquotes.io/api/random', {
+        fetch('/api/zen-koan', {
             headers: {
                 'Content-Type': 'application/json'
             }
