@@ -5,6 +5,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: #f0f0f0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased; /* Apply text-shadowing anti-aliasing */
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
@@ -16,8 +19,9 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: 0 auto;
-  max-width: 60ch;
+  max-width: 800px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
@@ -44,19 +48,21 @@ hr {
   font-weight: 700;
   color: #333;
   margin-bottom: 1rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05); /* Apply text-shadowing hack */
 }
 
 p {
   font-size: 1.1rem;
-  line-height: 1.6;
   color: #666;
   margin-bottom: 1rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05); /* Apply text-shadowing hack */
 }
 
 a {
   color: #3498db;
   text-decoration: none;
   transition: all 0.3s ease;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05); /* Apply text-shadowing hack */
 }
 
 a:hover {
@@ -64,3 +70,25 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Style the list elements */
+ul {
+  list-style-type: none;
+  padding: 0;
+  counter-reset: custom-counter;
+}
+
+ul li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05); /* Apply text-shadowing hack */
+}
+
+ul li::before {
+  counter-increment: custom-counter;
+  content: counter(custom-counter);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  color: #333;
+}
