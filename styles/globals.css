@@ -17,8 +17,18 @@ main {
   justify-content: center;
   margin: 0 auto;
   max-width: 60ch;
+  box-shadow: 5px 5px 2px rgb(32, 24, 24);
+  animation: wiggle 5s infinite;
 }
 
 hr {
   width: 100%;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
 }
